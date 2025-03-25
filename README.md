@@ -177,7 +177,7 @@ Example:
 rviz2 -d ~/humble_ws/src/robotics_assignment_part2/rviz.rviz
 ```
 
-#### To Run RViz for RRT Navigation:
+#### To Run SLAM launch file:
 Open fourth terminal and create directory inside humble_ws inside docker after starting [the docker container](#Start-the-Docker-container), and run the following script:
 
 ```sh
