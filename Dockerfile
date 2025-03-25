@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y \
     ros-humble-tf-transformations \
     ros-humble-navigation2 \
     ros-humble-nav2-bringup \
-    ros-humble-rmw-cyclonedds-cpp \
+    # ros-humble-rmw-cyclonedds-cpp \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip install transforms3d
@@ -37,7 +37,8 @@ RUN /bin/bash -c "source /opt/ros/humble/setup.bash && \
 
 # Set environment variables
 # ENV ROS_DOMAIN_ID=0 
-ENV RMW_IMPLEMENTATION=rmw_cyclonedds_cpp 
+# ENV RMW_IMPLEMENTATION=rmw_cyclonedds_cpp 
+ENV FASTRTPS_DEFAULT_PROFILES_FILE=/root/humble_ws/src/robotics_assignment_part2/fastdds.xml
 
 # Add alias commands
 RUN echo "alias pubtwist='ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r __ns:=/my_robot -r cmd_vel:=/YOUR_ROBOT/twist'" >> /root/.bashrc
