@@ -117,7 +117,7 @@ echo 'export ROS_DOMAIN_ID=<a number>' >> ~/.bashrc
 ```
 ##### Set DDS 
 ```bash
-FASTRTPS_DEFAULT_PROFILES_FILE=/root/humble_ws/src/robotics_assignment_part2/fastdds.xml
+export FASTRTPS_DEFAULT_PROFILES_FILE=/root/humble_ws/src/robotics_assignment_part2/fastdds.xml
 ```
 You can check your environment variables by
 ```bash
