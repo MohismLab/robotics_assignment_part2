@@ -144,6 +144,7 @@ Start `robotics_assignment_part2/ros/usd/world.usd`. There should be a TurtleBot
 ```sh
 ros2 run robotics_assignment_part2 potential_field_navigation
 ```
+You can have a look at video demo via this [link](https://drive.google.com/file/d/13TY-EtgryuxA52AiRZRzQjXBo5nqreOY/view?usp=sharing).
 
 #### To Run RRT Navigation:
 ```sh
@@ -155,6 +156,7 @@ Open another terminal, run
 # to set a goal
 ros2 topic pub /move_base_simple/goal geometry_msgs/PoseStamped "{header: {frame_id: 'map'}, pose: {position: {x: 1.8, y: 1.8, z: 0.0}, orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}}}"
 ```
+You can have a look at video demo via this [link](https://drive.google.com/file/d/1XpqhuIKPXjvyhsF4UshHsSLvR_Ht8N21/view?usp=sharing).
 
 #### To Run RViz for RRT Navigation:
 Open third terminal and create directory inside humble_ws inside docker after starting [the docker container](#Start-the-Docker-container), and run the following script:
@@ -167,6 +169,7 @@ Example:
 ```sh
 rviz2 -d ~/humble_ws/src/robotics_assignment_part2/rviz.rviz
 ```
+You can have a look at video demo via this [link](https://drive.google.com/file/d/1ErcEZxq5tYg09DELUEAWk5ROuyroIbAu/view?usp=sharing).
 
 
 #### To View the Result Plots
