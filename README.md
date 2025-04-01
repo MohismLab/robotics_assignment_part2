@@ -87,7 +87,7 @@ To start the isaacsim using another terminal, run:
 ```bash
 cd ~/.local/share/ov/pkg/isaac-sim-4.2.0
 export ROS_DISTRO=humble
-export FASTRTPS_DEFAULT_PROFILES_FILE=/root/humble_ws/src/robotics_assignment_part2/fastdds.xml
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/.local/share/ov/pkg/isaac-sim-4.2.0/exts/omni.isaac.ros2_bridge/humble/lib
 export ROS_DOMAIN_ID=<a number>
 . ./isaac-sim.sh 
 ```
