@@ -98,7 +98,7 @@ You can start selecter either by omniverse launcher or by terminal. When launchi
 
 ![image](images/ros_setup_isaacsim.png)
 
-When isaacsim start, import environment usd file by navigate to <isaacsim_mini_assignment/usd/world.usd> at content  
+When isaacsim start, import environment usd file by navigate to <robotics_assignment_part2/ros/usd/world.usd> at content  
 
 ![image](images/import_usd.png)
 
