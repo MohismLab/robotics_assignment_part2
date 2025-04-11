@@ -108,6 +108,7 @@ When isaacsim start, import environment usd file by navigate to <robotics_assign
 ##### Set ROS_DOMAIN_ID
 To set the `ROS_DOMAIN_ID` and avoid communication conflicts:
 ```bash
+export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
 export ROS_DOMAIN_ID=<a number>
 ```
 Or add the following line to your `~/.bashrc` file
