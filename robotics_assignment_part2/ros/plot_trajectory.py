@@ -7,8 +7,7 @@ import matplotlib.pylab as plt
 
 
 if __name__ == '__main__':
-    data = np.genfromtxt('/tmp/isaacsim_exercise.txt', delimiter=',')
-
+    data = np.genfromtxt('src/robotics_assignment_part2/data/isaacsim_exercise.txt', delimiter=',')
     plt.figure()
     plt.plot(data[:, 0], data[:, 1], 'b', label='true')
     plt.plot(data[:, 3], data[:, 4], 'g', label='linearized')
