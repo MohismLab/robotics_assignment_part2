@@ -19,6 +19,7 @@ from geometry_msgs.msg import Twist
 from tf2_ros import TransformListener, Buffer
 from geometry_msgs.msg import TransformStamped
 from tf_transformations import euler_from_quaternion
+from ament_index_python.packages import get_package_prefix
 
 # Import the potential_field.py code rather than copy-pasting.
 directory = os.path.join(os.path.dirname(
@@ -129,7 +130,12 @@ class PotentialFieldNavigation(Node):
 
         self.publisher = self.create_publisher(Twist, '/cmd_vel', 10)
         self.pose_history = []
-        with open('/tmp/isaacsim_exercise.txt', 'w'):
+        mypackage_path = get_package_prefix('robotics_assignment_part2').replace('install', 'src')
+        data_path = os.path.join(mypackage_path, 'data')
+        if not os.path.exists(data_path):
+            os.makedirs(data_path)
+        self.path_data = os.path.join(data_path,'isaacsim_exercise.txt')
+        with open(self.path_data, 'w'):
             pass
 
     def timer_callback(self):
@@ -205,7 +211,7 @@ class PotentialFieldNavigation(Node):
         self.pose_history.append(np.concatenate(
             [self.groundtruth_pose, absolute_point_position], axis=0))
         if len(self.pose_history) % 10 == 0:
-            with open('/tmp/isaacsim_exercise.txt', 'a') as fp:
+            with open(self.path_data, 'a') as fp:
                 fp.write('\n'.join(','.join(str(v) for v in p)
                          for p in self.pose_history) + '\n')
                 self.pose_history = []
